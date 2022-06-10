@@ -1,0 +1,139 @@
+@font-face {
+    font-family: matrix;
+    src: url(/fonts/Miltown_.ttf);
+}
+
+
+body {
+    margin: 0;
+    padding: 15px;
+}
+
+.bg {
+
+    padding: 0 50px;
+    min-height: 200px;
+    min-width: 320px;
+
+}
+
+.current_shapes {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    /* background-color: chocolate; */
+
+}
+
+.current_shapes--title{
+font-family: 'Josefin Sans', sans-serif;
+color: green;
+}
+
+.scr {
+    display: flex;
+    justify-content: center;
+    min-width: 100px;
+    /* background-color: coral; */
+    padding: 10px;
+}
+
+.roundBtn{
+    width: 50px;
+    height: 50px;
+    transition: all 250ms cubic-bezier();
+    cursor: pointer;
+}
+
+.roundBtn:hover{
+    transform: scale(1.1);
+
+}
+
+.indicator{
+  font-family: matrix;
+  color: green;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.current_shapes--number, .catted_shapes--number {
+    font-family: matrix;
+    color: green;
+    font-size: 20px;
+    font-weight: 700;
+    border: green 3px dotted;
+}
+ 
+
+.buttons {
+    display: flex;
+    gap: 25px;
+
+}
+
+
+.gravity_value,
+.shapes_amount {
+    display: flex;
+    gap: 5px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    background-color: grey;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    border: 0;
+}
+
+
+
+
+.button_description {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: green;
+}
+
+.screen {
+    background-color: darkgoldenrod;
+    background-image: url(/images/bp-bg-3.jpg);
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+
+    /* z-index: -1; */
+}
+
+.figure {
+    position: absolute;
+    cursor: pointer;
+    visibility: visible;
+    top: -50px;
+}
+
+
+.active {
+    transform: translateY(1000px);
+    transition: all 2000ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+
+.boom {
+   
+display: none;
+
+}
+
