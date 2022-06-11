@@ -1,6 +1,6 @@
 @font-face {
     font-family: matrix;
-    src: url(./fonts/Miltown_.ttf);
+    src: url(../fonts/Miltown_.ttf);
 }
 
 
@@ -109,7 +109,7 @@ body {
 
 .screen {
     background-color: darkgoldenrod;
-    background-image: url(./images/bp-bg-3.jpg);
+    background-image: url(../images/bp-bg-3.jpg);
     height: 500px;
     width: 100%;
     overflow: hidden;
