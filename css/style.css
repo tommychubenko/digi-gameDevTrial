@@ -27,9 +27,9 @@ body {
 
 }
 
-.current_shapes--title{
-font-family: 'Josefin Sans', sans-serif;
-color: green;
+.current_shapes--title {
+    font-family: 'Josefin Sans', sans-serif;
+    color: green;
 }
 
 .scr {
@@ -40,35 +40,36 @@ color: green;
     padding: 10px;
 }
 
-.roundBtn{
+.roundBtn {
     width: 50px;
     height: 50px;
     transition: all 250ms cubic-bezier();
     cursor: pointer;
 }
 
-.roundBtn:hover{
+.roundBtn:hover {
     transform: scale(1.1);
 
 }
 
-.indicator{
-  font-family: matrix;
-  color: green;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.indicator {
+    font-family: matrix;
+    color: green;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.current_shapes--number, .catted_shapes--number {
+.current_shapes--number,
+.catted_shapes--number {
     font-family: matrix;
     color: green;
     font-size: 20px;
     font-weight: 700;
     border: green 3px dotted;
 }
- 
+
 
 .buttons {
     display: flex;
@@ -80,6 +81,7 @@ color: green;
 .gravity_value,
 .shapes_amount {
     display: flex;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -126,14 +128,14 @@ color: green;
 
 
 .active {
+    cursor: crosshair;
     transform: translateY(1000px);
     transition: all 2000ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 
 .boom {
-   
-display: none;
+
+    display: none;
 
 }
-

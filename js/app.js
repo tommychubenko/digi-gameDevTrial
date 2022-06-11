@@ -12,7 +12,9 @@ const increaseSpeedOfAnimation = document.querySelector('.gravity_value--increas
 const decreaseSpeedOfAnimation = document.querySelector('.gravity_value--decrease');
 
 
+
 let figureCounter = 0;
+ refFigureCounter.textContent = figureCounter;
 let speedCreation = 1000;
 let timerId = null;
 let speedOfAnimation = 4000;
@@ -21,46 +23,33 @@ speedScreen.textContent = speedOfAnimation/1000;
 const speedOfClassChange = 50;
 const shapeSize = { w: 100, h: 100 };
 let figureCauted = 0;
-// let cautedFigureNumber.textContent = figureCauted; 
-
-const figures = [
-    'sqare', 'circle', 'oval', 'triangle', 'house', 'packman', 'pizza'
-];
-
-
+cautedFigureNumber.textContent = figureCauted; 
 
 
 function getRandomNum(min, max) {
   return Math.random() * (max - min) + min;
 };
 
-
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
         .padStart(6, 0)}`};
-    
-
-
+   
 function addAnActiveClass() {
     screen.firstElementChild.classList.add('active'),
     screen.firstElementChild.style.transition = `${speedOfAnimation}ms`;
     
     
 }
-
-function setSpeed() {
-
-    
-}
-    
+ 
 function removeFigure() {
     screen.lastElementChild.remove()
 }
 
 function stopCreation() {
     clearInterval(timerId)
-    }
+}
+    
 
 function startCreation() {
     clearInterval(timerId),
@@ -71,25 +60,21 @@ function startCreation() {
 
 
 
-
 function createFigure() {
     const displayWidth = screen.offsetWidth
     const randomColor = getRandomHexColor();
-    const randomNumber = getRandomNum(0, (displayWidth - shapeSize.w));
-    // const randomFigure = Math.round(getRandomNum(0, figures.length-1))
-    // console.log(randomFigure);
-    // const figureId = Date.now();
-    setTimeout(figureCounter += 1, speedCreation);
+    const randomNumber = getRandomNum(0, (displayWidth - 100));
+     setTimeout(figureCounter += 1, speedCreation);
     refFigureCounter.textContent = figureCounter;
     
+
     const figureHtml =
-    `<div class="figure" style="background-color: ${randomColor}; height: ${shapeSize.h}px;  width: ${shapeSize.w}px; left: ${randomNumber}px;"></div>`;
+     `<div class="figure" style="background-color: ${randomColor}; height: ${shapeSize.h}px;  width: ${shapeSize.w}px; left: ${randomNumber}px;"></div>`;
     screen.insertAdjacentHTML('afterbegin', figureHtml);
     setTimeout(addAnActiveClass, 50);
     setTimeout(removeFigure, (speedCreation + speedOfAnimation));   
 };
     
-
 
 
 addBtn.addEventListener('click', startCreation);
@@ -168,11 +153,10 @@ function createFigureFromClick(e) {
     }
 
 
- 
 screen.addEventListener('click', createFigureFromClick);
 
 
 
 
 
-// startCreation();
+startCreation();
