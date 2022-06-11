@@ -69,7 +69,8 @@ function createFigure() {
     
 
     const figureHtml =
-     `<div class="figure" style="background-color: ${randomColor}; height: ${shapeSize.h}px;  width: ${shapeSize.w}px; left: ${randomNumber}px;"></div>`;
+    `<div class="figure" style="background-color: ${randomColor}; height: ${shapeSize.h}px;  width: ${shapeSize.w}px; left: ${randomNumber}px;"></div>`;
+    //  `<div class="figure" style="background-color: ${randomColor}; height: ${shapeSize.h}px;  width: ${shapeSize.w}px; left: ${randomNumber}px;"></div>`;
     screen.insertAdjacentHTML('afterbegin', figureHtml);
     setTimeout(addAnActiveClass, 50);
     setTimeout(removeFigure, (speedCreation + speedOfAnimation));   
